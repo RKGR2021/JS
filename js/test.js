@@ -33,12 +33,11 @@ if (z > 0 && z % 6 == 0) {
   document.write('<h2>Number is Negative and Odd</h2>')
 }
 
-let hour = 12;
-if(hour>=6 && hour<12){
-    document.write('<h1>Good Morning</h1>')
-}
-else if(hour>=12 && hour<18){
-    document.write('<h1>Good Afternoon</h1>')
-}else{
-    document.write('<h1>Good Evening</h1>')
+let hour = 12
+if (hour >= 6 && hour < 12) {
+  document.write('<h1>Good Morning</h1>')
+} else if (hour >= 12 && hour < 18) {
+  document.write('<h1>Good Afternoon</h1>')
+} else {
+  document.write('<h1>Good Evening</h1>')
 }
