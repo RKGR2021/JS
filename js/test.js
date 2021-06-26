@@ -41,3 +41,42 @@ if (hour >= 6 && hour < 12) {
 } else {
   document.write('<h1>Good Evening</h1>')
 }
+
+let day=8;
+switch (day) {
+  case 1:
+    document.write('شنبه')
+    break;
+  case 2:
+    document.write('یکشنبه')
+    break;
+    case 3:
+      document.write('دوشنبه')
+      break;
+      case 4:
+        document.write('سه شنبه')
+        break;
+        case 5:
+          document.write('چهارشنبه')
+          break;
+          case 6:
+            document.write('پنجشنبه')
+            break;
+            case 7:
+              document.write('جمعه')
+              break;
+  default:
+    document.write('<h2>خارج از ایام هفته</h2>')
+    break;
+}
+
+
+document.write("<table border='3'>")
+for(let i=1;i<=10;i++){
+  document.write("<tr>")
+  for(let j=1;j<=10;j++){
+    document.write("<td>"+j*i+"</td>")
+  }
+  document.write("</tr>")
+}
+document.write("</table>")
