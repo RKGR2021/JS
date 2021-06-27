@@ -80,3 +80,34 @@ for(let i=1;i<=10;i++){
   document.write("</tr>")
 }
 document.write("</table>")
+
+
+// let i=0;
+// while (i<10) {
+//   console.log(i)
+//   i=i+2;
+// }
+
+// let i=0;
+// let text = ""
+// while (i<10) {
+//   text ="<br/>The Number is " + i
+//   i=i+2;
+//   document.write('<h2>'+text+'</h2>')
+  
+// }
+
+// let b=10;
+// do {
+//   document.write('<h2>'+b+'</h2>')
+//   b++
+// } while (b<=50);
+
+let m=10;
+do{
+  document.write('<h2>'+"The Number is "+m+'</h2>')
+  if(m===50)
+  break;
+  m++
+}while (m<50)
+document.write('<h2>oops</h2>')
