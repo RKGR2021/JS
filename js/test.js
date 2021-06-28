@@ -111,3 +111,53 @@ do{
   m++
 }while (m<50)
 document.write('<h2>oops</h2>')
+
+function addnumber() {
+  let a=5
+  let b=3
+  let c=a+b
+  document.write('<h3>'+c+'</h3>')
+}
+addnumber()
+
+function numb(a,b) {
+  let d=a+b
+  document.write('<h3>'+d+'</h3>')
+}
+numb(5,10)
+
+function myval(a,b) {
+  return a*b
+}
+const result = myval(5,100)
+document.write('<h1>'+result+'</h1>')
+
+function getday(day) {
+  switch(day){
+    case 1:
+      document.write('<h2>'+"شنبه"+'</h2>')
+      break;
+      case 2:
+      document.write('<h2>'+"یکشنبه"+'</h2>')
+      break;
+      case 3:
+      document.write('<h2>'+"دوشنبه"+'</h2>')
+      break;
+      case 4:
+      document.write('<h2>'+"سه شنبه"+'</h2>')
+      break;
+      case 5:
+      document.write('<h2>'+"چهارشنبه"+'</h2>')
+      break;
+      case 6:
+      document.write('<h2>'+"پنجشنبه"+'</h2>')
+      break;
+      case 7:
+      document.write('<h2>'+"جمعه"+'</h2>')
+      break;
+     default:
+       document.write('<h1>'+"اشتباه میزنی"+'</h1>')
+       break;
+  }
+}
+getday(5)
