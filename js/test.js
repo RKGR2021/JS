@@ -161,3 +161,19 @@ function getday(day) {
   }
 }
 getday(5)
+
+
+const user ={
+  fname:'kourosh',
+  lname:'kabiri',
+  age:28,
+  printage:function(){
+    console.log(user.age)
+  }
+}
+user.printage()
+user.username ='admin'
+console.log(user)
+user.age = 29
+delete user.username
+console.log(user)
