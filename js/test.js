@@ -177,3 +177,23 @@ console.log(user)
 user.age = 29
 delete user.username
 console.log(user)
+
+window.onload = function(){
+  const newparagraph = document.createElement(
+    'p'
+  )
+  newparagraph.innerText = 'kourosh hi how are u?';
+  document.body.appendChild(newparagraph)
+}
+
+function clickhandler(){
+  const link = document.getElementById('link')
+  console.log(link.getAttribute('href'))
+  link.setAttribute('href','https://yahoo.com')
+  link.innerText = 'Reza'
+  link.style.textDecoration = 'none'
+  link.className = 'change'
+  let str = document.querySelector('.change').innerText
+  console.log(str)
+
+}
