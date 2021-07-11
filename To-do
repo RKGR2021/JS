@@ -10,9 +10,7 @@
 <body>
     <button class="adduserbtn">Add User</button>
     <ul class="name-list">
-        <li>Reza</li>
-        <li>Kourosh</li>
-        <li>Jafar</li>
+        
     </ul>
     <input type="text" class="list-input">
 </body>
