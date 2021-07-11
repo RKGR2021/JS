@@ -195,5 +195,4 @@ function clickhandler(){
   link.className = 'change'
   let str = document.querySelector('.change').innerText
   console.log(str)
-
 }
