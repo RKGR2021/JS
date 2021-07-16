@@ -20,7 +20,5 @@ function reset(){
     second = 0;
     document.getElementById('message').innerHTML = second + 'Sec'
     
-    
-    
 }
 
