@@ -200,8 +200,9 @@
 
 let index = 0
 setInterval(writetext,50)
-const text = "Kourosh is Great and Good Boy"
+
 function writetext(){
+  const text = "Kourosh is Great and Good Boy"
   document.getElementById('text2').innerText = text.slice(0,index)
   index++
 if(index>text.length-1){
