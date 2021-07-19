@@ -59,3 +59,19 @@ transform: translateY(0%);
 {
     transform: translateX(-300%);
 }
+
+#container
+{
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+.toast
+{
+    background-color: chartreuse;
+    color: cornsilk;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 2px;
+}
