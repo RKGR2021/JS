@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'IranYekanB';
+    src: url('font/IRANYekanWebExtraBold.eot');
+    src: url('font/IRANYekanWebExtraBold.woff');
+  }
+
+  @font-face {
+    font-family: 'IranYekanSB';
+    src: url('font/IRANYekanWebBold.eot');
+    src: url('font/IRANYekanWebBold.woff');
+  }
+
+  *{
+      font-family: 'IranYekanSB';
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+  }
+
+  header,form{
+      display: flex;
+      min-height: 20vh;
+      justify-content: center;
+      align-items: center;
+      direction: rtl;
+  }
+  form input[type = text] , input[type = number]{
+      border: none;
+      background: rgb(204, 204, 204);
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      direction: rtl;
+      margin-left: 5px;
+      border-radius: 5px;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  form input::placeholder{
+      font-size: 13.5px;
+      color: rgba(0, 0, 0, 0.5);
+  }
+  form input:focus{
+      outline: none;
+  }
+  form button{
+      margin-right: 5px;
+      color: white;
+      width: 50px;
+      height: 50px;
+      border-radius: 30px;
+      background-color: rgb(7, 150, 7);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+  }
+  form button i{
+      font-size: 35px;
+  }
+
+  select{
+    
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      border: none;
+      outline: none;
+      color: #777777;
+      width: 10rem;
+      padding: 0.7rem;
+      font-size: 16px;
+      border-radius: 0 5px 5px 0;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      background: #ccc;
+      cursor: pointer;
+  }
+  .type-number::after{
+      content: "\25BC";
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgb(7, 150, 7);
+      height: 100%;
+      padding: 1rem;
+      color: white;
+      pointer-events: none;
+      align-items: center;
+  }
+  .type-number{
+      position: relative;
+      overflow: hidden;
+  }
+
+  .todo-container
+  {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+  }
+
+  .todo-list
+  {
+      min-width: 30%;
+      list-style: none;
+  }
+
+  .todo{
+      background: rgb(7, 150, 7);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: black;
+      border: 2px solid rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
+      margin: 0.5rem;
+      font-size: 1rem;
+      direction: rtl;
+      transition: all 0.9s ease-in-out;
+      opacity: 1;
+      
+  }
+
+  .todo-item
+  {
+      flex: 1;
+      flex-flow: column;
+      padding: 0rem 0.5rem;
+      text-align: right;
+      display: flex;
+  }
+  span{
+      padding-top: 5px;
+  }
+
+  .del_btn
+  {
+      background: white;
+      border: none;
+      color: rgb(7, 150, 7);
+      padding: 2rem;
+      cursor: pointer;
+      font-size: 1rem;
+      border-radius: 5px 0 0 5px;
+    
+  }
+
+  .fall
+  {
+      opacity: 0;
+      transition: all 0.5s ease;
+      transform: translateX(300%) rotateZ(250deg);
+  }
+
+  .fas
+  {
+      pointer-events: none;
+  }
