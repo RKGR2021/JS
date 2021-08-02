@@ -150,7 +150,7 @@
   {
       opacity: 0;
       transition: all 0.5s ease;
-      transform: translateX(300%) rotateZ(250deg);
+      transform: translateY(-300%) rotateZ(360deg);
   }
 
   .fas
