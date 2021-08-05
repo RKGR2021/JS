@@ -74,6 +74,7 @@
       border: 2px solid rgba(0, 0, 0, 0.2);
       background: #ccc;
       cursor: pointer;
+      
   }
   .type-number::after{
       content: "\25BC";
@@ -157,3 +158,41 @@
   {
       pointer-events: none;
   }
+
+  .select
+  {
+      position: relative;
+      min-width: 30%;
+      overflow: hidden;
+      
+  }
+
+  .select::after{
+    content: "\25BC";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgb(7, 150, 7);
+    height: 100%;
+    padding: 1rem;
+    color: white;
+    pointer-events: none;
+    align-items: center;
+   
+}
+.contact-filter
+{
+    width: 100%;
+    direction: rtl;
+    display: none;
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: scale(0);
+}
+
+.showing
+{
+    opacity: 1;
+    transition: all 0.5s ease;
+    transform: scale(1);
+}

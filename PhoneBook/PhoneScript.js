@@ -5,14 +5,15 @@ const todomobileinput = document.querySelector('.todo-mobile-input')
 const btn = document.querySelector('.todo-btn')
 const todolist = document.querySelector('.todo-list')
 const selectbox = document.querySelector('.type-todo')
-
+const filter_option = document.querySelector('.contact-filter')
+const selecting = document.querySelector('.select')
 
 // Event Listener
 
 btn.addEventListener('click', additem)
-todolist.addEventListener('click' , deleitem)
+todolist.addEventListener('click', deleitem)
 btn.addEventListener('click', validation)
-
+filter_option.addEventListener('click', filtercontacts)
 
 // function
 
@@ -20,6 +21,7 @@ function additem (event) {
   event.preventDefault()
   const contact_todo = document.createElement('div')
   contact_todo.classList.add('todo')
+  contact_todo.classList.add(selectbox.options[selectbox.selectedIndex].value)
   const newitem = document.createElement('li')
   const name = document.createElement('span')
   const number = document.createElement('span')
@@ -37,7 +39,17 @@ function additem (event) {
   del_btn.innerHTML = '<i class = "fas fa-trash"></i>'
   del_btn.classList.add('del_btn')
   contact_todo.appendChild(del_btn)
+  setTimeout(() => {
+    filter_option.classList.add('showing')
+  }, 200)
+  filter_option.style.display = 'block'
+  selecting.style.opacity = '1'
 
+  savelocalcontact({
+    name : todonameinput.value,
+    number : todomobileinput.value,
+    type : selectbox.options[selectbox.selectedIndex].innerText,
+  })
 }
 
 // validation
@@ -61,17 +73,51 @@ function validation () {
   }
 }
 
-function deleitem(event) {
+function deleitem (event) {
   const item = event.target
-  if(item.classList[0]==='del_btn'){
-    const parentitem = item.parentElement;
+  if (item.classList[0] === 'del_btn') {
+    const parentitem = item.parentElement
     parentitem.classList.add('fall')
-    setTimeout(()=>{
+    setTimeout(() => {
       parentitem.remove()
-    },1500)
-    
-    
+    }, 1500)
   }
-  
 }
 
+function filtercontacts (event) {
+  const contacts = todolist.childNodes;
+  contacts.forEach(function(contact) {
+    switch (event.target.value) {
+      case "2":
+        contact.style.display = 'flex'
+        break;
+        case "1":
+          if(contact.classList.contains('1')){
+            contact.style.display = 'flex'
+          }else{
+            contact.style.display = 'none'
+          }
+          break;
+          case "0":
+            if(!contact.classList.contains('1')){
+              contact.style.display = 'flex'
+            }else{
+              contact.style.display = 'none'
+            }
+            break;
+      default:
+        break;
+    }
+   })
+}
+
+function savelocalcontact(contact) {
+  let contacts;
+  if(localStorage.getItem('contacts')===null){
+    contacts = []
+  }else{
+    contacts = JSON.parse(localStorage.getItem('contacts'))
+  }
+  contacts.push(contact)
+  localStorage.setItem('contacts',JSON.stringify(contacts))
+}
